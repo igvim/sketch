@@ -1,5 +1,19 @@
 .container {
     width: 500px;
-    aspect-ratio: 1;
-    border: solid black;;
+    height: 500px;
+    border: solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.item {
+    width: 6.25%;
+    height: 6.25%;
+    border: dashed red;
+    box-sizing: border-box;
+}
+
+/*
+height 
+*/
