@@ -14,3 +14,7 @@
     border: dashed red;
     box-sizing: border-box;
 }
+
+.hovered {
+    background-color: black;
+}
