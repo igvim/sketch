@@ -1,30 +1,22 @@
-/*
-define size of container!
-create elements
-append them
-make elements square?
-*/
-
 const container = document.querySelector('.container');
-const button = document.querySelector('button');
+const change = document.querySelector('.change');
+const clear = document.querySelector('.clear');
 let gridSize = 16;
 
 createGrid(gridSize);
 
-/*
-destroy existing grid
-take in new grid dimension
-if not a number or greater than 100, repeat prompt, else
-create new grid with new grid size
-*/
-
-button.addEventListener('click', (e) => {
+change.addEventListener('click', () => {
     gridSize = prompt('Enter a new grid size');
     while (isNaN(gridSize) || gridSize > 100) {
         gridSize = prompt('Enter a number less than 100');
     }
-    destroyGrid();
-    createGrid(gridSize);
+    if (gridSize) {
+        resetGrid(gridSize);
+    }
+});
+
+clear.addEventListener('click', () => {
+    resetGrid(gridSize);
 });
 
 function createGrid(gridSize) {
@@ -44,4 +36,9 @@ function destroyGrid() {
     while (container.firstChild) {
         container.removeChild(container.firstChild)
     }
+}
+
+function resetGrid(gridSize) {
+    destroyGrid();
+    createGrid(gridSize);
 }
