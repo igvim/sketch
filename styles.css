@@ -10,10 +10,7 @@
 .item {
     width: 6.25%;
     height: 6.25%;
+    /*these are determined by the grid dimensions - 100%/16 = 6.25%*/
     border: dashed red;
     box-sizing: border-box;
 }
-
-/*
-height 
-*/
